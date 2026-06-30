@@ -14,7 +14,12 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const siteUrl = process.env.VERCEL_URL
+  ? `https://${process.env.VERCEL_URL}`
+  : "https://scamswat.com";
+
 export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl),
   title: {
     default: "ScamSwat - AI-Powered Scam Detection & Protection",
     template: "%s | ScamSwat",
