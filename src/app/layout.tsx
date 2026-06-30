@@ -20,12 +20,35 @@ export const metadata: Metadata = {
     template: "%s | ScamSwat",
   },
   description: "Free AI-powered scam detection tools. Check suspicious links, messages, and phone numbers instantly. Protect yourself from online fraud.",
-  keywords: ["scam detector", "phishing checker", "fraud detection", "link scanner", "cybersecurity", "scam protection"],
+  keywords: ["scam detector", "phishing checker", "fraud detection", "link scanner", "cybersecurity", "scam protection", "AI security", "online safety"],
   openGraph: {
     title: "ScamSwat - AI-Powered Scam Detection",
     description: "Protect yourself from online scams with AI-powered analysis.",
     type: "website",
     siteName: "ScamSwat",
+    locale: "en_US",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "ScamSwat - AI-Powered Scam Detection",
+    description: "Free AI-powered tools to detect phishing, scam messages, and fraudulent calls.",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  verification: {
+    google: "YOUR_GOOGLE_SEARCH_CONSOLE_ID",
+  },
+  alternates: {
+    canonical: "https://scamswat.com",
   },
 };
 
@@ -37,6 +60,29 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}>
       <body className="min-h-full flex flex-col bg-navy text-zinc-100">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebApplication",
+              name: "ScamSwat",
+              url: "https://scamswat.com",
+              description: "Free AI-powered scam detection tools. Check suspicious links, messages, and phone numbers instantly.",
+              applicationCategory: "SecurityApplication",
+              operatingSystem: "All",
+              offers: {
+                "@type": "Offer",
+                price: "0",
+                priceCurrency: "USD",
+              },
+              author: {
+                "@type": "Organization",
+                name: "ScamSwat",
+              },
+            }),
+          }}
+        />
         <Navbar />
         <main className="flex-1">{children}</main>
         <Footer />
