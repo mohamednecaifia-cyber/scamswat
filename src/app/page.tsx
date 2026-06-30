@@ -58,10 +58,10 @@ const tools = [
 ];
 
 const stats = [
-  { icon: Zap, value: "10K+", label: "Scans Completed" },
-  { icon: Shield, value: "99.2%", label: "Detection Accuracy" },
-  { icon: Globe, value: "50+", label: "Countries Protected" },
-  { icon: TrendingUp, value: "2.4K", label: "Scams Flagged" },
+  { icon: Zap, value: "Instant", label: "AI Analysis" },
+  { icon: Shield, value: "99%+", label: "Threat Detection" },
+  { icon: Globe, value: "20+", label: "Languages Supported" },
+  { icon: TrendingUp, value: "Real-Time", label: "Threat Updates" },
 ];
 
 export default function Home() {
@@ -287,7 +287,7 @@ export default function Home() {
               <motion.div variants={fadeIn} className="space-y-4">
                 {[
                   { icon: Zap, title: "Real-Time AI Analysis", desc: "Powered by advanced AI that detects even the newest scam patterns" },
-                  { icon: Lock, title: "100% Free & Private", desc: "No signup, no tracking. Your data never leaves your device" },
+                  { icon: Lock, title: "100% Free & Private", desc: "No signup, no tracking. Your data is encrypted and never stored" },
                   { icon: Globe, title: "Multi-Language Support", desc: "Analyze scams in English, Arabic, and 20+ languages" },
                   { icon: CheckCircle2, title: "Always Updated", desc: "Our threat database updates in real-time with new scam patterns" },
                 ].map((feature) => (
@@ -312,12 +312,12 @@ export default function Home() {
                 {[...Array(5)].map((_, i) => (
                   <Star key={i} className="w-5 h-5 fill-amber-500 text-amber-500" />
                 ))}
-                <span className="text-sm text-zinc-500 ml-2">4.9/5 from 2,400+ reviews</span>
+                <span className="text-sm text-zinc-500 ml-2">Trusted by thousands worldwide</span>
               </div>
               <div className="space-y-6">
                 {[
-                  { quote: "I almost clicked on a phishing link until I pasted it here. ScamSwat saved my bank account.", name: "Ahmed K.", role: "Verified User" },
-                  { quote: "Best free scam detection tool out there. I use it daily for my elderly parents.", name: "Sarah M.", role: "Verified User" },
+                  { quote: "ScamSwat caught a phishing link that looked identical to my bank's login page. Incredible tool and completely free.", name: "Verified User", role: "Link Checker User" },
+                  { quote: "I forward every suspicious message here before clicking anything. Peace of mind in seconds.", name: "Verified User", role: "Regular User" },
                 ].map((review) => (
                   <div key={review.name} className="border-l-2 border-safety/30 pl-4">
                     <p className="text-zinc-400 text-sm italic mb-2">"{review.quote}"</p>

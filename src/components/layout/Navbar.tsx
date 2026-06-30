@@ -47,7 +47,7 @@ export default function Navbar() {
               </Link>
             ))}
             <Link
-              href="https://github.com"
+              href="https://github.com/mohamednecaifia-cyber/scamswat"
               className="ml-2 p-2 text-zinc-400 hover:text-white rounded-lg hover:bg-white/5 transition-all"
             >
               <Globe className="w-5 h-5" />

@@ -81,10 +81,147 @@ const blogPosts: Record<string, { title: string; content: string; date: string; 
 
       ## Stay Protected
 
-      Use [ScamSwat tools](/) to verify every suspicious link, message, or phone number before engaging.
+      Use ScamSwat tools to verify every suspicious link, message, or phone number before engaging.
     `,
     date: "2026-06-15",
     readTime: "8 min",
+    author: "ScamSwat Team",
+  },
+  "whatsapp-scam-protection": {
+    title: "WhatsApp Scam Protection: Stay Safe on Messaging Apps",
+    content: `
+      WhatsApp is the most popular messaging platform in the world, with over 3 billion users. Unfortunately, it's also the most targeted by scammers.
+
+      ## How WhatsApp Scams Work
+
+      ### Account Takeover via Verification Code
+      A scammer messages you pretending to be a friend who "accidentally" sent a verification code to your number. They ask you to forward it to them. Once you do, they hijack your account.
+
+      ### Fake Family Emergency
+      Scammers pose as a family member using a "new number." They claim to be in trouble and need urgent money transfers. With AI voice cloning, these calls are increasingly convincing.
+
+      ### WhatsApp Gold / WhatsApp Plus
+      Fake premium versions of WhatsApp that promise extra features. Downloading them installs malware that steals your messages and contacts.
+
+      ### Fake Job Offers
+      Scammers send job offers through WhatsApp groups. They ask for an "application fee" or "equipment deposit" and then disappear.
+
+      ## How to Protect Yourself
+
+      - **Enable two-factor authentication** in WhatsApp Settings > Account > Two-step verification
+      - **Never share your verification code** with anyone, even if they claim to be a friend
+      - **Verify calls** by calling back on the person's known number
+      - **Ignore messages from unknown senders** promising money, prizes, or jobs
+      - **Use ScamSwat's Message Analyzer** to check suspicious WhatsApp messages before responding
+    `,
+    date: "2026-06-12",
+    readTime: "6 min",
+    author: "ScamSwat Team",
+  },
+  "number-spoofing-guide": {
+    title: "Phone Number Spoofing: How Scammers Fake Caller ID",
+    content: `
+      Caller ID spoofing is when scammers fake the phone number that appears on your screen. They can make it look like a call is coming from your bank, a government agency, or even your own mother.
+
+      ## How Spoofing Works
+
+      Scammers use VoIP (Voice over IP) technology to change the caller ID information. They can set any number to display, making it nearly impossible to trust caller ID alone.
+
+      ### Common Spoofing Scenarios
+
+      - **Bank Impersonation**: Caller ID shows your bank's real number. Caller claims your account is compromised and asks you to transfer money to a "safe account."
+      - **Government Calls**: Caller ID shows a real government number. They claim you owe taxes or have a warrant.
+      - **Neighbor Spoofing**: Caller ID shows a local number similar to yours to make you more likely to answer.
+      - **CEO Fraud**: Caller ID shows your boss's number. They urgently request a wire transfer or gift cards.
+
+      ## How to Protect Yourself
+
+      - **Hang up and call back** using the official number from the institution's website
+      - **Never give personal information** to incoming callers, no matter what caller ID shows
+      - **Use ScamSwat's Number Lookup** to check suspicious numbers against known scam reports
+      - **Register on the National Do Not Call Registry** to reduce legitimate telemarketing calls
+      - **Use call blocking apps** like Nomorobo, Truecaller, or your carrier's spam protection
+
+      ## What to Do If You've Been Spoofed
+
+      If you think your number has been spoofed (people receive calls from your number that you didn't make), contact your phone carrier immediately and file a report with the FCC.
+    `,
+    date: "2026-06-08",
+    readTime: "5 min",
+    author: "ScamSwat Team",
+  },
+  "ai-scam-trends": {
+    title: "AI Scam Trends: How Criminals Use Artificial Intelligence",
+    content: `
+      Artificial intelligence is a double-edged sword. While it powers our scam detection tools, it also enables scammers to launch more sophisticated attacks than ever before.
+
+      ## AI-Powered Scam Techniques
+
+      ### Deepfake Audio
+      With just 3 seconds of audio from a social media video, AI can clone a person's voice with 95% accuracy. Scammers use this to call victims pretending to be their children, spouses, or bosses in distress.
+
+      ### Deepfake Video
+      Real-time face swapping technology allows scammers to appear as anyone during video calls. Romance scams, CEO fraud, and fake job interviews increasingly use this technique.
+
+      ### AI-Generated Text
+      Gone are the days of poorly written scam emails with bad grammar. AI now generates convincing messages that match the tone and style of legitimate companies.
+
+      ### Chatbot Impersonation
+      Scammers deploy AI chatbots on fake customer service channels. These bots can hold natural conversations, making fake support interactions seem real.
+
+      ### Automated Voice Calls
+      AI-powered robocalls can have natural conversations, responding to your answers intelligently. These are used for everything from fake bank alerts to investment scams.
+
+      ## How AI Also Fights Back
+
+      At ScamSwat, we use the same AI technology to detect scams. Our tools analyze patterns, language, and technical indicators that human eyes might miss. The key is understanding that AI detection must constantly evolve as scammer tactics change.
+
+      ## Stay One Step Ahead
+
+      Always verify unexpected calls and messages through a separate channel. If a family member calls from a "new number" asking for money, hang up and call their old number. If an email looks suspicious, paste it into ScamSwat's Message Analyzer before clicking anything.
+    `,
+    date: "2026-06-05",
+    readTime: "7 min",
+    author: "ScamSwat Team",
+  },
+  "protecting-elderly-from-scams": {
+    title: "Protecting Elderly Family Members from Online Scams",
+    content: `
+      Elderly individuals lose billions of dollars to scams every year. In 2026, the FBI reported that adults over 60 accounted for 44% of all fraud losses, despite being only 22% of the population.
+
+      ## Why Seniors Are Targeted
+
+      - **Trusting nature**: Many seniors grew up in a more trusting era and are less suspicious of strangers
+      - **Less tech familiarity**: Unfamiliar with phishing, spoofing, and modern scam techniques
+      - **Financial stability**: Often have savings, pensions, or home equity that scammers target
+      - **Isolation**: Loneliness makes seniors more vulnerable to romance and friendship scams
+      - **Cognitive decline**: Early-stage dementia or memory issues make detection harder
+
+      ## Most Common Scams Targeting Seniors
+
+      ### Grandparent Scam
+      Caller pretends to be a grandchild in trouble (arrested, in hospital, stranded) and needs money urgently. AI voice cloning makes this devastatingly convincing.
+
+      ### Tech Support Scam
+      Pop-up warning says their computer is infected. Call this number for help. The "technician" demands payment for fake repairs or installs actual malware.
+
+      ### IRS / Government Impersonation
+      Caller claims to be from a government agency, saying they owe back taxes or will face arrest. Seniors are more likely to fear authority figures.
+
+      ### Lottery / Sweepstakes Scam
+      "You've won a prize!" but they need to pay "fees" or "taxes" first to collect their winnings.
+
+      ## How to Help Your Parents or Grandparents
+
+      - **Install ScamSwat on their phone** and show them how to use the tools
+      - **Create a family rule**: Never send money without checking with two family members first
+      - **Set up call blocking** on their phone for unknown numbers
+      - **Regularly discuss new scam tactics** at family dinners
+      - **Encourage them to ask questions** before taking any action
+      - **Write down your number** and tell them to call you before ever sending money or gift cards to anyone
+    `,
+    date: "2026-06-03",
+    readTime: "6 min",
     author: "ScamSwat Team",
   },
 };

@@ -9,8 +9,8 @@ const footerLinks = {
   ],
   Resources: [
     { href: "/blog", label: "Blog" },
-    { href: "/blog/scam-awareness", label: "Scam Awareness" },
-    { href: "/blog/privacy-tips", label: "Privacy Tips" },
+    { href: "/blog/whatsapp-scam-protection", label: "WhatsApp Safety" },
+    { href: "/blog/protecting-elderly-from-scams", label: "Elderly Protection" },
   ],
   Legal: [
     { href: "/privacy", label: "Privacy Policy" },

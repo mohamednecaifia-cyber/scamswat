@@ -50,10 +50,10 @@ export const metadata: Metadata = {
     },
   },
   verification: {
-    google: "YOUR_GOOGLE_SEARCH_CONSOLE_ID",
+    google: process.env.NEXT_PUBLIC_GOOGLE_VERIFICATION || "",
   },
   alternates: {
-    canonical: "https://scamswat.com",
+    canonical: siteUrl,
   },
 };
 
@@ -72,7 +72,7 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "WebApplication",
               name: "ScamSwat",
-              url: "https://scamswat.com",
+              url: siteUrl,
               description: "Free AI-powered scam detection tools. Check suspicious links, messages, and phone numbers instantly.",
               applicationCategory: "SecurityApplication",
               operatingSystem: "All",
