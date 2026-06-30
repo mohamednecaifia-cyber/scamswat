@@ -155,7 +155,7 @@ function analyzeNumberInput(input: string, digits: string): PreAnalysis {
   if (/^\+?0{2,}/.test(input)) suspiciousPatterns.push("Suspicious number pattern (multiple leading zeros)");
 
   const invalidLength = isTooShort || isTooLong;
-  const scamScore = invalidLength ? 70 : Math.min(100, suspiciousPatterns.length * 50);
+  const scamScore = invalidLength ? 90 : Math.min(100, suspiciousPatterns.length * 50);
 
   return {
     inputType: "number",

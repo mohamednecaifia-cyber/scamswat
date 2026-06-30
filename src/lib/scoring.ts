@@ -17,7 +17,9 @@ export function computeFinalScore(
 
   const llmScamScore = llmIsScam ? llmConfidence : (100 - llmConfidence);
 
-  const finalConfidence = Math.round(ruleScore * 0.4 + llmScamScore * 0.6);
+  const ruleWeight = ruleScore >= 80 ? 0.7 : 0.4;
+  const llmWeight = 1 - ruleWeight;
+  const finalConfidence = Math.round(ruleScore * ruleWeight + llmScamScore * llmWeight);
   const isScam = finalConfidence >= 50;
 
   const reasons = buildReasons(pre, llmResult, ruleScore, llmIsScam);
