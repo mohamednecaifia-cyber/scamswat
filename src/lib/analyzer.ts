@@ -82,7 +82,7 @@ export function preAnalyze(input: string): PreAnalysis {
     (/^[a-zA-Z0-9][-a-zA-Z0-9]*\.[a-zA-Z]{2,}/.test(trimmed) && !/^\+?\d/.test(trimmed));
 
   if (isUrl) return analyzeUrlInput(trimmed, digits);
-  if (/^\+?\d[\d\s\-().]{4,}$/.test(trimmed)) return analyzeNumberInput(trimmed, digits);
+  if (/^\+?\d[\d\s\-().]*$/.test(trimmed)) return analyzeNumberInput(trimmed, digits);
   return analyzeMessageInput(trimmed, digits);
 }
 
