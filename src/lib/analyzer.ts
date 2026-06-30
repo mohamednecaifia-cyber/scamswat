@@ -43,7 +43,7 @@ const URGENCY_KEYWORDS = [
   "urgent", "immediately", "act now", "limited time", "expires",
   "suspended", "blocked", "locked", "final warning", "legal action",
   "click here", "confirm now", "verify now", "update your",
-  "won", "winner", "prize", "free", "congratulations",
+  "won", "winner", "prize", "congratulations",
   "عاجل", "فوراً", "آخر فرصة", "مبروك", "فزت", "جائزة",
   "مجمّد", "معلق", "بلاغ", "إنذار", "محظور",
 ];
