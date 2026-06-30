@@ -1,6 +1,3 @@
-const GEMINI_API_KEY = process.env.NEXT_PUBLIC_GEMINI_API_KEY || "";
-const GEMINI_API_URL = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent";
-
 export interface ScamAnalysis {
   isScam: boolean;
   confidence: number;
@@ -49,31 +46,21 @@ Return JSON with:
 }
 
 async function analyzeWithGemini(prompt: string): Promise<ScamAnalysis> {
-  if (!GEMINI_API_KEY) {
-    return simulateAnalysis(prompt);
-  }
-
   try {
-    const response = await fetch(`${GEMINI_API_URL}?key=${GEMINI_API_KEY}`, {
+    const response = await fetch("/api/analyze", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        contents: [{ parts: [{ text: `${prompt}\n\nReturn ONLY valid JSON.` }] }],
-        generationConfig: { temperature: 0.2, maxOutputTokens: 1024 },
-      }),
+      body: JSON.stringify({ prompt }),
     });
 
-    const data = await response.json();
-    const text = data?.candidates?.[0]?.content?.parts?.[0]?.text || "";
-    const cleaned = text.replace(/```json?/gi, "").replace(/```/g, "").trim();
-    return JSON.parse(cleaned);
-  } catch (error) {
-    console.error("Gemini API error:", error);
-    return simulateAnalysis(prompt);
+    if (!response.ok) throw new Error("API error");
+    return await response.json();
+  } catch {
+    return simulateAnalysis();
   }
 }
 
-function simulateAnalysis(prompt: string): ScamAnalysis {
+function simulateAnalysis(): ScamAnalysis {
   const isScam = Math.random() > 0.4;
   const scamReasons = [
     "Suspicious domain pattern detected",
