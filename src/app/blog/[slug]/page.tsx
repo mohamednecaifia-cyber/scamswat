@@ -230,8 +230,9 @@ export async function generateStaticParams() {
   return Object.keys(blogPosts).map((slug) => ({ slug }));
 }
 
-export function generateMetadata({ params }: { params: { slug: string } }): Metadata {
-  const post = blogPosts[params.slug];
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await params;
+  const post = blogPosts[slug];
   if (!post) return {};
   return {
     title: post.title + " | ScamSwat Blog",
@@ -239,8 +240,9 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
   };
 }
 
-export default function BlogPost({ params }: { params: { slug: string } }) {
-  const post = blogPosts[params.slug];
+export default async function BlogPost({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const post = blogPosts[slug];
   if (!post) notFound();
 
   return (
