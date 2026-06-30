@@ -17,7 +17,8 @@ STRICT RULES — you MUST follow EVERY rule:
 5. Your job is ONLY to add semantic analysis: does the intent/presentation look deceptive?
 
 Return valid JSON ONLY:
-{"isScam":true|false,"confidence":0-100,"reasons":["..."],"safetyTips":["..."]}`;
+{"isScam":true|false,"confidence":0-100,"reasons":["..."],"safetyTips":["..."]}
+Note: "confidence" means how certain you are of your verdict, whether true or false.`;
 }
 
 export function buildMessagePrompt(message: string, pre: PreAnalysis): string {
@@ -35,7 +36,8 @@ STRICT RULES — you MUST follow EVERY rule:
 5. Your job is ONLY to add semantic analysis: tone, persuasion tactics, sender impersonation clues.
 
 Return valid JSON ONLY:
-{"isScam":true|false,"confidence":0-100,"reasons":["..."],"safetyTips":["..."]}`;
+{"isScam":true|false,"confidence":0-100,"reasons":["..."],"safetyTips":["..."]}
+Note: "confidence" means how certain you are of your verdict, whether true or false.`;
 }
 
 export function buildNumberPrompt(number: string, pre: PreAnalysis): string {
@@ -53,5 +55,6 @@ STRICT RULES — you MUST follow EVERY rule:
 5. Your job is ONLY to assess common scam number patterns based on format.
 
 Return valid JSON ONLY:
-{"isScam":true|false,"confidence":0-100,"reasons":["..."],"safetyTips":["..."]}`;
+{"isScam":true|false,"confidence":0-100,"reasons":["..."],"safetyTips":["..."]}
+Note: "confidence" means how certain you are of your verdict, whether true or false.`;
 }

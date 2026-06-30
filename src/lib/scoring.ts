@@ -12,10 +12,12 @@ export function computeFinalScore(
   llmResult: { isScam: boolean; confidence: number; reasons: string[] } | null
 ): ScamAnalysis {
   const ruleScore = pre.scamScore;
-  const llmScore = llmResult?.confidence ?? 50;
   const llmIsScam = llmResult?.isScam ?? false;
+  const llmConfidence = llmResult?.confidence ?? 50;
 
-  const finalConfidence = Math.round(ruleScore * 0.4 + llmScore * 0.6);
+  const llmScamScore = llmIsScam ? llmConfidence : (100 - llmConfidence);
+
+  const finalConfidence = Math.round(ruleScore * 0.4 + llmScamScore * 0.6);
   const isScam = finalConfidence >= 50;
 
   const reasons = buildReasons(pre, llmResult, ruleScore, llmIsScam);
