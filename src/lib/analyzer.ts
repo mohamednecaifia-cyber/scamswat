@@ -147,12 +147,15 @@ function analyzeNumberInput(input: string, digits: string): PreAnalysis {
   const digitCount = digits.length;
 
   const suspiciousPatterns: string[] = [];
-  if (digitCount < 7) suspiciousPatterns.push("Too few digits for a valid phone number");
-  if (digitCount > 15) suspiciousPatterns.push("Too many digits for a valid phone number");
+  const isTooShort = digitCount < 7;
+  const isTooLong = digitCount > 15;
+  if (isTooShort) suspiciousPatterns.push("Too few digits for a valid phone number");
+  if (isTooLong) suspiciousPatterns.push("Too many digits for a valid phone number");
   if (!countryMatch) suspiciousPatterns.push("Missing international country code (+...)");
   if (/^\+?0{2,}/.test(input)) suspiciousPatterns.push("Suspicious number pattern (multiple leading zeros)");
 
-  const scamScore = Math.min(100, suspiciousPatterns.length * 30);
+  const invalidLength = isTooShort || isTooLong;
+  const scamScore = invalidLength ? 70 : Math.min(100, suspiciousPatterns.length * 50);
 
   return {
     inputType: "number",
